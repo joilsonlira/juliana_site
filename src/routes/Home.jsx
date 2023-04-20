@@ -1,17 +1,9 @@
 import React from "react";
-
+import { Section_container } from "../components/Section_container";
 const Home = ()=>{
     return(
         <>
-            <section>
-                <div className="info">
-                    <h2>Título que convença o visitante a continuar lendo</h2>
-                    <p>Subtítulo que desenvolva a sua proposta única de venda</p>
-                </div>
-                <div className="iagem">
-                    <img src="#" alt="Imagem" />
-                </div>
-            </section>
+            <Section_container />
             <section>
                 <div className="info">
                     <h2>Lista apresentando mais benefícios da sua oferta</h2>

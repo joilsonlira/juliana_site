@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         font-family: sans-serif;
         box-sizing: border-box;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
         background: #F3EAF6;
     }
 `;

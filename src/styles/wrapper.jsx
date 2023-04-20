@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.main`
-  padding: 4em;
-  background: papayawhip;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
 `;

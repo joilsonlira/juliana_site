@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Fragment } from "react";
 import GlobalStyle from "./globalStyles";
 import {Wrapper} from "./styles/wrapper"
+import { Main_header } from "./components/Main_header";
 import React from "react";
 function App() {
 
@@ -9,25 +10,8 @@ function App() {
     <Fragment>
       <GlobalStyle />
       <Wrapper>
-
-        <header id="main_header">
-          <div id="logo">
-              <img src="/logo.svg" alt="Logo" />
-          </div>
-          <nav id="main_menu">
-              <div className="menu">
-                  <a href="#">Mesa</a>
-                  <a href="#">Terapia</a>
-              </div>
-              <div className="social">
-                  <ul>
-                      <li><a href="#"><img src="#" alt="IN" /></a></li>
-                      <li><a href="#"><img src="#" alt="YTB" /></a></li>
-                      <li><a href="#"><img src="#" alt="TK" /></a></li>
-                  </ul>
-              </div>
-          </nav>
-        </header>
+      <Main_header />
+        
       <Outlet />
       <footer id="main_footer">
         <h2>Chamada persuasiva para o formulário</h2>
