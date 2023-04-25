@@ -16,17 +16,17 @@ export const Header = styled.header`
         z-index: 1;
         top: 20px;
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 400px;
         border-radius: 100%;
-        border: 10px solid #3197A1;
+        border: 20px solid #3197A1;
         background: white;
 
     }
     & #logo img{
-        /* margin-top: 50px;
-        margin-left: 30px; */
-        width: 100px;
+        margin-top: 80px;
+        margin-left: 30px;
+        width: 200px;
         height: auto;
     }
 
@@ -63,6 +63,7 @@ export const Header = styled.header`
         height: 5vh;
         background: #3197A1;
     }
+
 `
 export const Main_header = ()=>{
     return(
