@@ -7,6 +7,7 @@ export const Header = styled.header`
     justify-content: space-between;
     width: 100%;
     height: 5vh;
+    padding: 0 64px;
     background: #3197A1;
 
     & #logo{

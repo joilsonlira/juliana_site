@@ -1,22 +1,45 @@
 import React from "react";
 import { Section_container } from "../components/Section_container";
+import { Depoimento_container } from "../components/depoimento";
 const Home = ()=>{
     return(
         <>
-            <Section_container />
-            <section>
-                <div className="info">
-                    <h2>Lista apresentando mais benefícios da sua oferta</h2>
-                    <p>Texto apresentando os principais benefícios da sua oferta em tom leve, porém objetivo e claro.</p>
-                </div>
-                <div className="highlight_container">
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                </div>
-            </section>
-            <section>
+            <Section_container
+            divs={["info", "imagem"]}
+            isFirst={"first"}
+            isHighlights={""}
+            imagem={"./imgs/empresaria.png"} 
+            direction={"row"}  
+            width={"35%"} 
+            text_align={"left"} 
+            title={"Título que convença o visitante a continuar lendo"} 
+            paragraph={"Subtítulo que desenvolva a sua proposta única de venda"} />
+
+            <Section_container
+            divs={["info", "highlight_container"]}
+            isFirst={""}
+            isHighlights={"hg"}
+            imagem={""} 
+            direction={"column"} 
+            width={"55%"} 
+            text_align={"center"}
+            title={"Título que convença o visitante a continuar lendo"} 
+            paragraph={"Subtítulo que desenvolva a sua proposta única de venda"} />
+
+            <Section_container
+            divs={["teste", "teste"]}
+            isFirst={""}
+            isHighlights={""}
+            imagem={""} 
+            direction={"row"} 
+            width={""} 
+            text_align={""}
+            title={""} 
+            paragraph={""}>
+
+                <Depoimento_container />
+            </Section_container>
+            {/* <section>
                 <div className="depoimento_container">
                     <article className="depoimento">
                         <header className="depoimento_header">
@@ -49,7 +72,7 @@ const Home = ()=>{
                 <div className="btn_container">
                     <button>CTA</button>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }

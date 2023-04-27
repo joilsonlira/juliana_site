@@ -8,14 +8,15 @@ const GlobalStyle = createGlobalStyle`
         color: initial;
         list-style: none;
         text-decoration: none;
-        font-family: sans-serif;
+        font-family: 'Inter', sans-serif;
         box-sizing: border-box;
     }
     
     body {
-        width: 100vw;
-        height: 100vh;
-        background: #F3EAF6;
+
+    background: #3197A1;
+
+        
     }
 `;
 

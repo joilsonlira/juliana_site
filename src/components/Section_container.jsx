@@ -8,14 +8,15 @@ const Section = styled.section`
     justify-content: center;
     width: 100%;
     height: 95vh;
-    padding: 20px 0;
+    padding: 20px 64px;
+    background: #F3EAF6;
 
     & .info{
         display: flex;
         flex-direction: column;
         row-gap: 20px;
         width: ${prop => prop.width};
-        text-align: ${prop=> prop.text_align};
+        text-align: ${prop => prop.text_align};
     }
     & .info h2{
         font-size: 48px;
@@ -68,29 +69,45 @@ const Section = styled.section`
     }
 `
 
-export const Section_container = ()=>{
+export const Section_container = (props)=>{
     return(
         <Fragment>
-            <Section direction={"row"}  width={"35%"} text_align={"left"}>
-                <div className="info">
-                    <h2>Título que convença o visitante a continuar lendo</h2>
-                    <p>Subtítulo que desenvolva a sua proposta única de venda</p>
-                </div>
-                <div className="imagem">
-                    <img src="./imgs/empresaria.png" alt="Imagem empresaria" />
-                </div>
-            </Section>
-            <Section direction={"column"} width={"55%"} text_align={"center"}>
-                <div className="info">
-                    <h2>Lista apresentando mais benefícios da sua oferta</h2>
-                    <p>Texto apresentando os principais benefícios da sua oferta em tom leve, porém objetivo e claro.</p>
-                </div>
-                <div className="highlight_container">
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                    <div className="highlights"></div>
-                </div>
+            <Section direction={props.direction} width={props.width} 
+            text_align={props.text_align}>
+                
+                    {
+
+                    (props.isFirst != "" &&
+                        <>
+                            <div className={props.divs[0]}>
+                                <h2>{props.title}</h2>
+                                <p>{props.paragraph}</p>
+                            </div>
+                            <div className={props.divs[1]}>
+                                <img src={props.imagem} alt="" />
+                            </div>
+                        </>
+                        
+                    )
+                    }
+                    {
+                    (props.isHighlights != "" &&
+                        <>
+                            <div className={props.divs[0]}>
+                                <h2>{props.title}</h2>
+                                <p>{props.paragraph}</p>
+                            </div>
+                            <div className={props.divs[1]}>
+                                <div className="highlights"></div>
+                                <div className="highlights"></div>
+                                <div className="highlights"></div>
+                                <div className="highlights"></div>
+                            </div>
+                        </>
+                    )
+                    }
+                
+
             </Section>
         </Fragment>
     )
